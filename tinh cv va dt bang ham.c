@@ -6,13 +6,23 @@ int dien_tich_HCN(int d, int r);
 int main (){
 	int d,r;
 	int CV, DT;
-	int i;
+	char i;
 printf("Nhap vao gia tri chieu dai:");
 scanf ("%d",&d);
 printf("\nNhap vao gia tri chieu rong:\n");
 scanf("%d", &r);
-CV=chu_vi_HCN(d,r);
-DT=dien_tich_HCN(d,r);
+printf("\nChon option de tinh :");
+scanf("%c",&i);
+switch (i){
+	case 'cv':
+		CV=chu_vi_HCN(d,r);
+		printf("\nChu vi la %d",CV);
+		break;
+	case 'dt':
+		DT=dien_tich_HCN(d,r);
+		printf("\nDien tich la %d",DT);
+		break;
+}
 return 0;
 }
 int chu_vi_HCN(int d,int r){
